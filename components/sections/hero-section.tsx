@@ -160,7 +160,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
-            {/* Circuit background image - subtle layer behind the grid */}
+      {/* Circuit background image - subtle layer behind the grid */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -168,6 +168,24 @@ export function HeroSection() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+        }}
+      />
+
+      {/* Noisy grid background */}
+      <NoiseGridBackground />
+      
+      {/* Corner brackets for Swiss design feel */}
+      <CornerBrackets />
+
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 pointer-events-none" />
+      
+      {/* Vignette effect */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%)',
         }}
       />
 
@@ -195,8 +213,9 @@ export function HeroSection() {
 
           {/* Main headline */}
           <h1
-            className="font-harmond text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] xl:text-[12rem] font-bold tracking-tight leading-[0.85] text-white"
+            className="font-harmond font-bold tracking-tight leading-[0.85] text-white"
             style={{
+              fontSize: 'clamp(2.5rem, 11vw, 8.5rem)',
               opacity: mounted ? 1 : 0,
               transform: mounted ? 'translateY(0)' : 'translateY(30px)',
               transition: 'opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s',
@@ -232,4 +251,3 @@ export function HeroSection() {
     </section>
   );
 }
-
