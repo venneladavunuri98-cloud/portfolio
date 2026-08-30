@@ -99,7 +99,7 @@ export const FloatingNav = ({
           strength={0.3}
         >
           <span className="px-4 py-2 font-harmond text-lg font-bold tracking-tight text-white">
-            K.
+            V.
           </span>
         </MagneticButton>
 

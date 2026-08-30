@@ -37,14 +37,13 @@ const GlowText = memo(function GlowText({
 
 export function AboutSection() {
   const skills = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Three.js",
-    "WebGL",
-    "Framer Motion",
-    "Node.js",
-    "Tailwind CSS",
+    "n8n",
+    "Vapi",
+    "Supabase",
+    "OpenAI / Claude",
+    "PostgreSQL",
+    "Webhooks",
+    "Apollo.io",
   ];
 
   return (
@@ -52,6 +51,17 @@ export function AboutSection() {
       id="about"
       className="relative min-h-screen w-full py-32 md:py-48 bg-black"
     >
+      {/* Circuit background image - faint atmosphere layer */}
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid-white opacity-[0.02]" />
 
@@ -70,7 +80,7 @@ export function AboutSection() {
             {/* Encrypted header */}
             <h2 className="font-harmond text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white mb-8">
               <EncryptedText
-                text="The Creative Mind"
+                text="The Automation Mind"
                 encryptedClassName="text-white/30"
                 revealedClassName="text-white"
                 revealDelayMs={40}
@@ -80,18 +90,25 @@ export function AboutSection() {
             {/* Bio paragraphs */}
             <div className="space-y-6 font-nohemi text-lg md:text-xl leading-relaxed text-white/60 max-w-3xl">
               <p>
-                I&apos;m a creative developer passionate about building{" "}
+                I partner with forward-thinking businesses to embed{" "}
                 <GlowText className="text-white">
-                  exceptional digital experiences
+                  artificial intelligence into their core operations
+                </GlowText>
+                . Rather than selling generic software, I engineer{" "}
+                <GlowText className="text-white">
+                  bespoke automated workflows
                 </GlowText>{" "}
-                that push the boundaries of what&apos;s possible on the web.
+                built around your exact operational bottlenecks.
               </p>
 
               <p>
-                My approach combines{" "}
-                <GlowText className="text-white">Swiss design principles</GlowText>{" "}
-                with cutting-edge technology to create work that&apos;s both
-                beautiful and performant.
+                Whether it&apos;s an enterprise-grade voice assistant handling
+                appointment bookings or an autonomous outbound sales engine, I
+                build the infrastructure that lets you{" "}
+                <GlowText className="text-white">
+                  scale revenue without scaling headcount
+                </GlowText>
+                .
               </p>
             </div>
 
@@ -121,10 +138,10 @@ export function AboutSection() {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { value: "5+", label: "Years Experience" },
-                { value: "50+", label: "Projects Completed" },
-                { value: "30+", label: "Happy Clients" },
-                { value: "∞", label: "Cups of Coffee" },
+                { value: "24/7", label: "Autonomous Uptime" },
+                { value: "10,000+", label: "Manual Hours Saved" },
+                { value: "100%", label: "CRM Data Accuracy" },
+                { value: "3x", label: "Pipeline Velocity" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center md:text-left">
                   <div className="font-harmond text-4xl md:text-5xl font-bold text-white">

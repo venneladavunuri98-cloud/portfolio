@@ -145,10 +145,10 @@ const CornerBrackets = memo(function CornerBrackets() {
 
 export function HeroSection() {
   const words = [
-    "Digital Experiences",
-    "Interactive Worlds", 
-    "High-End UI",
-    "Web Applications",
+    "Workflows",
+    "Business Processes",
+    "Manual Tasks",
+    "Data Pipelines",
   ];
 
   // Simple mount animation state
@@ -160,21 +160,14 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
-      {/* Noisy grid background */}
-      <NoiseGridBackground />
-      
-      {/* Corner brackets for Swiss design feel */}
-      <CornerBrackets />
-
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 pointer-events-none" />
-      
-      {/* Vignette effect */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
+            {/* Circuit background image - subtle layer behind the grid */}
+      <div
+        className="absolute inset-0 opacity-30"
         style={{
-          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%)',
+          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       />
 
@@ -197,7 +190,7 @@ export function HeroSection() {
               transition: 'opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s',
             }}
           >
-            Creative Developer
+            Automation Developer
           </p>
 
           {/* Main headline */}
@@ -210,7 +203,7 @@ export function HeroSection() {
               textShadow: '0 0 80px rgba(255,255,255,0.1)',
             }}
           >
-            CRAFTING
+            TRANSFORMING
           </h1>
 
           {/* Flip words line */}
@@ -223,7 +216,7 @@ export function HeroSection() {
             }}
           >
             <span className="font-nohemi text-xl md:text-3xl lg:text-4xl text-white/70">
-              I build
+              I automate
             </span>
             <FlipWords
               words={words}

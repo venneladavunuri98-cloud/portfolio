@@ -1,7 +1,8 @@
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
-import { WorksSection } from "@/components/sections/works-section";
+import { ServicesSection } from "@/components/sections/services-section";
+import { CaseStudySection } from "@/components/sections/case-study-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { FooterSection } from "@/components/sections/footer-section";
@@ -10,6 +11,7 @@ import { KineticMarquee } from "@/components/ui/kinetic-marquee";
 
 export default function Home() {
   const navItems = [
+    { name: "Services", link: "#services" },
     { name: "Work", link: "#work" },
     { name: "About", link: "#about" },
     { name: "Process", link: "#process" },
@@ -28,7 +30,7 @@ export default function Home() {
         {/* Kinetic Marquee - Breaking the grid */}
         <div className="relative -my-8 md:-my-12 z-0">
           <KineticMarquee 
-            text="CREATIVE DEVELOPER — BASED IN PARIS — DESIGN — CODE — "
+            text="AUTOMATION DEVELOPER — n8n — AI AGENTS — WORKFLOWS — "
             baseVelocity={0.5}
             skewFactor={0.8}
           />
@@ -37,8 +39,11 @@ export default function Home() {
         {/* About Section - The Pitch */}
         <AboutSection />
 
-        {/* Selected Works - The Core */}
-        <WorksSection />
+        {/* Services - The Core */}
+        <ServicesSection />
+
+        {/* Case Studies - Selected Work */}
+        <CaseStudySection />
 
         {/* Kinetic Marquee - Second instance */}
         <div className="relative -my-8 md:-my-12 z-0">

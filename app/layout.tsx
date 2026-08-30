@@ -24,23 +24,23 @@ const nohemi = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Developer | Digital Noir Portfolio",
+  title: "Vennela Davunuri | Automation Developer",
   description:
-    "Award-winning creative developer specializing in interactive digital experiences, high-end UI, and 3D web development.",
+    "Automation developer building production-grade AI systems — n8n workflows, agentic RAG, voice AI, and lead generation engines that replace manual work with reliable, self-running infrastructure.",
   keywords: [
-    "Creative Developer",
-    "Web Developer",
-    "UI/UX",
-    "Three.js",
-    "React",
-    "Next.js",
-    "Portfolio",
+    "Automation Developer",
+    "n8n",
+    "AI Agents",
+    "Workflow Automation",
+    "Voice AI",
+    "RAG",
+    "Lead Generation",
   ],
-  authors: [{ name: "Creative Developer" }],
+  authors: [{ name: "Vennela Davunuri" }],
   openGraph: {
-    title: "Creative Developer | Digital Noir Portfolio",
+    title: "Vennela Davunuri | Automation Developer",
     description:
-      "Award-winning creative developer specializing in interactive digital experiences.",
+      "Automation developer building production-grade AI systems that replace manual work with reliable, self-running infrastructure.",
     type: "website",
   },
 };

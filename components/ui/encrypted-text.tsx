@@ -130,10 +130,11 @@ export const EncryptedText: React.FC<EncryptedTextProps> = ({
           : scrambleCharsRef.current[index] ??
             generateRandomCharacter(charset);
 
-        return (
+       return (
           <span
             key={index}
             className={cn(isRevealed ? revealedClassName : encryptedClassName)}
+            suppressHydrationWarning
           >
             {displayChar}
           </span>

@@ -154,6 +154,17 @@ export function FooterSection() {
       id="contact"
       className="relative w-full bg-black"
     >
+      {/* Circuit background image - subtle layer behind the glow */}
+      <div
+        className="absolute inset-0 opacity-25"
+        style={{
+          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+
       {/* Dotted glow background */}
       <DottedGlowBackground className="pointer-events-none opacity-20 [mask-image:radial-gradient(ellipse_at_center,white_30%,transparent_80%)]" />
 
@@ -175,19 +186,19 @@ export function FooterSection() {
           >
             LET&apos;S
             <br />
-            TALK
+            AUTOMATE
           </h2>
 
           {/* Subtext */}
           <p className="font-nohemi text-lg md:text-xl text-white/50 max-w-lg mb-12">
-            Have a project in mind? Let&apos;s create something extraordinary
-            together.
+            Looking to build a production-grade AI system, or need an
+            automation engineer on your team? Let&apos;s talk architecture.
           </p>
 
           {/* CTA Button with Magnetic Effect */}
           <MagneticButton
             as="a"
-            href="mailto:dev.sufyaan@gmail.com"
+            href="mailto:venneladavunuri98@gmail.com"
             strength={0.4}
             className="group"
           >
@@ -207,20 +218,24 @@ export function FooterSection() {
 
           {/* Email flip */}
           <div className="mt-12">
-            <FlippingEmail email="dev.sufyaan@gmail.com" />
+            <FlippingEmail email="venneladavunuri98@gmail.com" />
           </div>
 
           {/* Social links with magnetic effect */}
           <div className="mt-16 flex items-center gap-6 flex-wrap justify-center">
-            {["Twitter", "GitHub", "LinkedIn", "Dribbble"].map((social) => (
+            {[
+              { name: "GitHub", href: "#" },
+              { name: "LinkedIn", href: "https://www.linkedin.com/in/venneladavunuri" },
+              { name: "Gmail", href: "mailto:venneladavunuri98@gmail.com" },
+            ].map((social) => (
               <MagneticButton
-                key={social}
+                key={social.name}
                 as="a"
-                href="#"
+                href={social.href}
                 strength={0.5}
               >
                 <span className="font-nohemi text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors duration-200 px-2 py-1">
-                  {social}
+                  {social.name}
                 </span>
               </MagneticButton>
             ))}
@@ -233,10 +248,7 @@ export function FooterSection() {
         <div className="swiss-container">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
             <p className="font-nohemi text-xs text-white/40">
-              © {new Date().getFullYear()} Sufyaan. All rights reserved.
-            </p>
-            <p className="font-nohemi text-xs text-white/40">
-              GitHub: dev-sufyaan | Designed & Built with ♥ and lots of ☕
+              © {new Date().getFullYear()} Vennela Davunuri. All rights reserved.
             </p>
           </div>
         </div>

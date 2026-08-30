@@ -7,29 +7,29 @@ export function ProcessSection() {
   const timelineData = [
     {
       title: "01",
-      date: "Discovery",
+      date: "Discovery & Strategy",
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Understanding Your Vision
+            Understanding Your Operations
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            Every great project starts with deep understanding. I dive into your
-            goals, audience, and requirements to craft a strategic foundation
-            that ensures success.
+            We start with a deep dive into your business operations. I map
+            out your current workflows to identify exactly where AI can
+            reduce costs or increase conversions.
           </p>
           <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Research & Analysis
+              Workflow & Process Mapping
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Competitive Audit
+              Cost & Conversion Opportunity Analysis
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              User Journey Mapping
+              Automation Feasibility Scoping
             </li>
           </ul>
         </div>
@@ -37,29 +37,29 @@ export function ProcessSection() {
     },
     {
       title: "02",
-      date: "Design",
+      date: "Custom Architecture",
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Crafting the Experience
+            Designing the System
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            Using Swiss design principles and modern aesthetics, I create
-            wireframes and high-fidelity designs that balance beauty with
-            functionality.
+            I design a bespoke, scalable system architecture using n8n,
+            Vapi, and LLMs, ensuring it integrates perfectly with your
+            existing CRM and software stack.
           </p>
           <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Wireframing & Prototyping
+              n8n, Vapi & LLM Architecture
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Visual Design System
+              CRM & Stack Integration
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Motion Design
+              Scalable System Design
             </li>
           </ul>
         </div>
@@ -67,29 +67,29 @@ export function ProcessSection() {
     },
     {
       title: "03",
-      date: "Development",
+      date: "Integration & Testing",
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Building with Precision
+            Engineering & Stress-Testing
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            Clean, performant code is the backbone of every project. I use
-            modern frameworks and best practices to build experiences that are
-            fast, accessible, and scalable.
+            I build the webhooks, configure the prompts, and aggressively
+            stress-test the AI&apos;s logic to ensure zero errors, zero
+            double-bookings, and perfect brand tone.
           </p>
           <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              React & Next.js Development
+              Webhook & API Configuration
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Three.js & WebGL Integration
+              Prompt Engineering
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Performance Optimization
+              Aggressive Edge-Case Testing
             </li>
           </ul>
         </div>
@@ -97,29 +97,29 @@ export function ProcessSection() {
     },
     {
       title: "04",
-      date: "Launch",
+      date: "Training & Handoff",
       content: (
         <div className="space-y-4">
           <h4 className="font-harmond text-2xl md:text-3xl font-bold text-white">
-            Delivering Excellence
+            Empowering Your Team
           </h4>
           <p className="font-nohemi text-base text-white/60 max-w-lg">
-            A successful launch is just the beginning. I ensure smooth
-            deployment, comprehensive testing, and ongoing support to keep your
-            project running flawlessly.
+            I don&apos;t just hand over code. I provide full documentation,
+            system walk-throughs, and ongoing support to ensure your team is
+            fully empowered by their new AI infrastructure.
           </p>
           <ul className="space-y-2 font-nohemi text-sm text-white/50">
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Quality Assurance
+              Full Documentation
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Deployment & CI/CD
+              System Walkthroughs
             </li>
             <li className="flex items-center gap-2">
               <span className="w-1 h-1 rounded-full bg-accent-blue" />
-              Ongoing Maintenance
+              Ongoing Support
             </li>
           </ul>
         </div>
@@ -132,6 +132,17 @@ export function ProcessSection() {
       id="process"
       className="relative min-h-screen w-full py-32 md:py-48 bg-black"
     >
+      {/* Circuit background image - faint atmosphere layer */}
+      <div
+        className="absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-blue/[0.02] to-transparent" />
 
@@ -146,8 +157,8 @@ export function ProcessSection() {
               Process
             </h2>
             <p className="font-nohemi text-lg text-white/50 max-w-xl">
-              A refined methodology that ensures every project is delivered with
-              the highest quality and attention to detail.
+              A proven methodology for turning manual bottlenecks into
+              autonomous, production-grade systems.
             </p>
           </div>
         </div>
