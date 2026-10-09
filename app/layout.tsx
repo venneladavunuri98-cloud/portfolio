@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "RAG",
     "Lead Generation",
   ],
-  authors: [{ name: "Vennela Davunuri" }], verification: { google: "Kj_dl8tmFpBDUC7drnI0MlLUc3IiGX5uVUxiQ1fA0-o" }, verification: { google: "Kj_dl8tmFpBDUC7drnI0MlLUc3IiGX5uVUxiQ1fA0-o" },
+  authors: [{ name: "Vennela Davunuri" }], verification: { google: "Kj_dl8tmFpBDUC7drnI0MlLUc3IiGX5uVUxiQ1fA0-o" }, 
   openGraph: {
     title: "Vennela Davunuri | Automation Developer",
     description:
