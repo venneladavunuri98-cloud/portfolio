@@ -1,0 +1,579 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   PITCH BLACK SWISS - Global Styles
+   ============================================ */
+
+:root {
+  --color-black: #000000;
+  --color-black-50: #050505;
+  --color-white: #ffffff;
+  --color-accent-blue: #3b82f6;
+  --color-accent-orange: #ff6b35;
+  --color-silver: #c0c0c0;
+  
+  /* Cursor variables */
+  --cursor-size: 12px;
+  --cursor-size-hover: 48px;
+  
+  /* Noise opacity */
+  --noise-opacity: 0.035;
+}
+
+/* Force dark mode */
+html {
+  color-scheme: dark;
+}
+
+/* Base styles */
+html,
+body {
+  @apply bg-black text-white antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll behavior - Lenis handles this */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-white/20 text-white;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+/* Harmond - Display/Headlines */
+.font-harmond {
+  font-family: var(--font-harmond), serif;
+  font-feature-settings: 'liga' on, 'kern' on;
+}
+
+/* Nohemi - Body/UI */
+.font-nohemi {
+  font-family: var(--font-nohemi), sans-serif;
+  font-feature-settings: 'liga' on, 'kern' on;
+}
+
+/* Large display text */
+.text-display {
+  @apply font-harmond tracking-tight leading-[0.9];
+}
+
+/* Body text */
+.text-body {
+  @apply font-nohemi tracking-normal leading-relaxed;
+}
+
+/* ============================================
+   Swiss Grid System
+   ============================================ */
+
+.swiss-grid {
+  @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 md:gap-6;
+}
+
+.swiss-container {
+  @apply max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12;
+}
+
+/* ============================================
+   Noise Overlay (Film Grain)
+   ============================================ */
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: var(--noise-opacity);
+  mix-blend-mode: overlay;
+}
+
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/noise.webp');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/40;
+}
+
+/* ============================================
+   Link & Button Styles
+   ============================================ */
+
+.link-underline {
+  @apply relative;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out-expo;
+}
+
+.link-underline:hover::after {
+  @apply w-full;
+}
+
+/* ============================================
+   Glassmorphism
+   ============================================ */
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/5;
+}
+
+/* ============================================
+   Glow Effects
+   ============================================ */
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.glow-accent {
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.3);
+}
+
+/* ============================================
+   Animation Utilities
+   ============================================ */
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+/* Scroll indicator animation - CSS only */
+.scroll-indicator {
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(0.5);
+    opacity: 0.8;
+  }
+}
+
+/* ============================================
+   Custom Cursor - Hide default on desktop
+   ============================================ */
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* ============================================
+   Performance Optimizations
+   ============================================ */
+
+/* GPU acceleration for animations */
+.gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   Focus States
+   ============================================ */
+
+:focus-visible {
+  @apply outline-none ring-2 ring-white/50 ring-offset-2 ring-offset-black;
+}
+
+/* ============================================
+   Three.js Canvas
+   ============================================ */
+
+.three-canvas {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.three-canvas canvas {
+  @apply outline-none;
+}
+
+/* ============================================
+   Radial Gradient Background
+   ============================================ */
+
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+}
+
+/* ============================================
+   Glitch Animation for Distortion
+   ============================================ */
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    opacity: 0.3;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translate(2px, -2px);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translate(-1px, 1px);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translate(1px, -1px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   Perspective utilities for 3D transforms
+   ============================================ */
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   Hero Section Animations
+   ============================================ */
+
+/* Slow pulse for nodes */
+@keyframes pulse-node {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.animate-pulse-node {
+  animation: pulse-node 3s ease-in-out infinite;
+}
+
+.animate-pulse-node-delayed {
+  animation: pulse-node 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-pulse-node-slow {
+  animation: pulse-node 4s ease-in-out infinite;
+}
+
+/* Slow pulse animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Line drawing animation */
+@keyframes draw-line {
+  0% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 0.15;
+  }
+}
+
+.animate-draw-line {
+  animation: draw-line 4s ease-out forwards;
+}
+
+.animate-draw-line-delayed {
+  animation: draw-line 4s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* ============================================
+   Noisy Grid Background Animations
+   ============================================ */
+
+/* Hero grid pattern - CSS background */
+.hero-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 
+    100px 100px,
+    100px 100px,
+    20px 20px,
+    20px 20px;
+  background-position: 
+    -1px -1px,
+    -1px -1px,
+    -1px -1px,
+    -1px -1px;
+}
+
+/* Grid pulse animation */
+@keyframes grid-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-grid-pulse {
+  animation: grid-pulse 8s ease-in-out infinite;
+}
+
+.animate-grid-pulse-delayed {
+  animation: grid-pulse 8s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Grid intersection pulse */
+@keyframes grid-intersect {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+.animate-grid-intersect {
+  animation: grid-intersect 6s ease-in-out infinite;
+}
+
+/* Scanning line effect */
+@keyframes scan-line {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line 12s ease-in-out infinite;
+}
+
+/* Grid cell fade */
+@keyframes grid-fade {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+}
+
+.animate-grid-fade {
+  animation: grid-fade 10s ease-in-out infinite;
+}
+
+.animate-grid-fade-delayed {
+  animation: grid-fade 10s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+/* Noise animation for film grain effect */
+@keyframes noise {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+}
+
+.animate-noise {
+  animation: noise 1s steps(2) infinite;
+}
+
+
+/* Hero entrance - pure CSS so the headline shows before JavaScript loads */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Headline only slides (never invisible) so it counts as painted immediately */
+@keyframes hero-rise {
+  from { transform: translateY(24px); }
+  to { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes hero-rise { from { transform: none; } to { transform: none; } }
+  @keyframes hero-in { from { opacity: 1; transform: none; } to { opacity: 1; transform: none; } }
+}
