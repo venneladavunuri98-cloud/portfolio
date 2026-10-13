@@ -117,7 +117,7 @@ html.lenis body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://assets.aceternity.com/noise.webp');
+  background-image: url('/noise.webp');
   background-repeat: repeat;
   background-size: 200px 200px;
 }
@@ -562,3 +562,12 @@ html.lenis body {
   animation: noise 1s steps(2) infinite;
 }
 
+
+/* Hero entrance - pure CSS so the headline shows before JavaScript loads */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes hero-in { from { opacity: 1; transform: none; } to { opacity: 1; transform: none; } }
+}

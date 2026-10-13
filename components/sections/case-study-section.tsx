@@ -26,7 +26,7 @@ const caseStudies: CaseStudy[] = [
   {
     tag: "Agentic RAG",
     title: "Autonomous Knowledge Base Crawler",
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=70&w=1080&auto=format&fit=crop",
     proofSrc: "/office-chatbot-workflow.webp",
     overview:
       "An n8n-powered support agent with a nightly web crawler, cyrb53 content hashing, and a Supabase vector store — engineered to keep the AI grounded and hallucination-free.",
@@ -61,7 +61,7 @@ const caseStudies: CaseStudy[] = [
   {
     tag: "Voice AI",
     title: "Zero-Conflict Scheduling Agent",
-    src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2340&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=70&w=1080&auto=format&fit=crop",
     proofSrc: "/scheduling-multidoc-workflow.webp",
     overview:
       "A live voice-calling agent with strict webhook routing between Vapi and Google Calendar, handling real-time rescheduling while masking API latency for a seamless caller experience.",
@@ -96,7 +96,7 @@ const caseStudies: CaseStudy[] = [
   {
     tag: "Lead Generation",
     title: "LLM-Scored Outbound Engine",
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=70&w=1080&auto=format&fit=crop",
     proofSrc: "/leadgen-workflow.webp",
     overview:
       "A multi-branch n8n workflow that scrapes Apollo.io for tech-stack fingerprints and uses an LLM to score each lead's 'AI Readiness' — powering precision-targeted outreach.",
@@ -152,6 +152,8 @@ function CaseStudyImage({ study }: { study: CaseStudy }) {
           <img
             src={study.src}
             alt={study.title}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -177,6 +179,8 @@ function CaseStudyImage({ study }: { study: CaseStudy }) {
             <img
               src={study.proofSrc}
               alt={`${study.title} - real workflow`}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover pt-9"
             />
             <div className="absolute inset-0 bg-black/10 mix-blend-multiply pointer-events-none" />

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { memo, useEffect, useState, useRef } from "react";
+import React, { memo } from "react";
 import { FlipWords } from "@/components/ui/flip-words";
 
 // Noisy grid background with white lines
@@ -88,7 +88,7 @@ const NoiseGridBackground = memo(function NoiseGridBackground() {
       <div 
         className="absolute inset-0 opacity-[0.08] pointer-events-none animate-noise"
         style={{
-          backgroundImage: 'url(https://assets.aceternity.com/noise.webp)',
+          backgroundImage: 'url(/noise.webp)',
           backgroundRepeat: 'repeat',
           backgroundSize: '200px 200px',
         }}
@@ -151,12 +151,6 @@ export function HeroSection() {
     "Data Pipelines",
   ];
 
-  // Simple mount animation state
-  const [mounted, setMounted] = useState(false);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
@@ -193,19 +187,12 @@ export function HeroSection() {
       <div className="relative z-10 swiss-container w-full">
         <div
           className="flex flex-col items-center justify-center text-center"
-          style={{
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
-          }}
         >
           {/* Subtitle */}
           <p
             className="font-nohemi text-sm md:text-base font-medium uppercase tracking-[0.3em] text-white/50 mb-6"
             style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-              transition: 'opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s',
+              animation: 'hero-in 0.6s ease-out 0.1s both',
             }}
           >
             Automation Developer
@@ -216,9 +203,7 @@ export function HeroSection() {
             className="font-harmond font-bold tracking-tight leading-[0.85] text-white"
             style={{
               fontSize: 'clamp(2.5rem, 11vw, 8.5rem)',
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? 'translateY(0)' : 'translateY(30px)',
-              transition: 'opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s',
+              animation: 'hero-in 0.8s ease-out both',
               textShadow: '0 0 80px rgba(255,255,255,0.1)',
             }}
           >
@@ -229,9 +214,7 @@ export function HeroSection() {
           <div
             className="flex flex-wrap items-center justify-center gap-2 mt-4 md:mt-6"
             style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? 'translateY(0)' : 'translateY(30px)',
-              transition: 'opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s',
+              animation: 'hero-in 0.8s ease-out 0.3s both',
             }}
           >
             <span className="font-nohemi text-xl md:text-3xl lg:text-4xl text-white/70">

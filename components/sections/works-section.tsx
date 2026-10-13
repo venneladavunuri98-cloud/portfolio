@@ -7,7 +7,7 @@ export function WorksSection() {
   const projects = [
     {
       title: "E-Commerce Platform",
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=70&w=1080&auto=format&fit=crop",
       category: "Web Development",
       description:
         "A high-performance e-commerce solution with real-time inventory and 3D product visualization.",
@@ -15,7 +15,7 @@ export function WorksSection() {
     },
     {
       title: "Interactive Dashboard",
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=70&w=1080&auto=format&fit=crop",
       category: "UI/UX Design",
       description:
         "Data visualization dashboard with smooth animations and intuitive user experience.",
@@ -23,7 +23,7 @@ export function WorksSection() {
     },
     {
       title: "Brand Identity System",
-      src: "https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=2340&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1634942537034-2531766767d1?q=70&w=1080&auto=format&fit=crop",
       category: "Branding",
       description:
         "Complete brand identity system including logo, typography, and digital guidelines.",
@@ -31,7 +31,7 @@ export function WorksSection() {
     },
     {
       title: "WebGL Experience",
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2532&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=70&w=1080&auto=format&fit=crop",
       category: "3D / WebGL",
       description:
         "Immersive 3D experience built with Three.js featuring interactive storytelling.",
@@ -39,7 +39,7 @@ export function WorksSection() {
     },
     {
       title: "Mobile Application",
-      src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2340&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=70&w=1080&auto=format&fit=crop",
       category: "Mobile",
       description:
         "Cross-platform mobile app with seamless animations and offline-first architecture.",
@@ -47,7 +47,7 @@ export function WorksSection() {
     },
     {
       title: "SaaS Platform",
-      src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2340&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=70&w=1080&auto=format&fit=crop",
       category: "Full Stack",
       description:
         "Enterprise SaaS platform with real-time collaboration and AI-powered features.",
