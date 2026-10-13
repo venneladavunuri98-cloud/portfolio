@@ -40,7 +40,7 @@ export function AboutSection() {
     "n8n",
     "Vapi",
     "Supabase",
-    "OpenAI / Claude",
+    "OpenAI / LLM APIs",
     "PostgreSQL",
     "Webhooks",
     "Apollo.io",
