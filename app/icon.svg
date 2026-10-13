@@ -16,7 +16,7 @@
       <polygon points="-70,-70 25,-70 65,-30 70,-25 70,70 -70,70"/>
     </clipPath>
   </defs>
-  <g class="d" transform="translate(256,256) scale(1.12) translate(-256,-256)">
+  <g class="d" transform="translate(256,256) scale(1.26) translate(-256,-256)">
     <rect x="-65" y="-65" width="130" height="130" rx="26" transform="translate(256,157) rotate(45)"/>
     <rect x="-65" y="-65" width="130" height="130" rx="26" transform="translate(157,256) rotate(45)"/>
     <rect x="-65" y="-65" width="130" height="130" rx="26" transform="translate(355,256) rotate(45)"/>
