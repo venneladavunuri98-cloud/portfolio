@@ -21,7 +21,7 @@ const tools = [
   { name: "Vapi", icon: IconPhoneCall },
   { name: "Supabase", icon: IconDatabase },
   { name: "OpenAI", icon: IconBrain },
-  { name: "Claude", icon: IconSparkles },
+  { name: "LangGraph", icon: IconSparkles },
   { name: "PostgreSQL", icon: IconServer },
   { name: "Apollo.io", icon: IconTargetArrow },
   { name: "LangChain", icon: IconLink },
