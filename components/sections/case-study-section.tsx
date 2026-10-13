@@ -118,7 +118,7 @@ const caseStudies: CaseStudy[] = [
         step: "03",
         title: "LLM Injection",
         description:
-          'I insert OpenAI or Claude into the workflow to handle the "messy" human data — scoring leads, categorizing intent, or extracting specific entities from unstructured text.',
+          'I insert an LLM (OpenAI) into the workflow to handle the "messy" human data — scoring leads, categorizing intent, or extracting specific entities from unstructured text.',
       },
       {
         step: "04",
