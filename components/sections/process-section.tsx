@@ -136,7 +136,7 @@ export function ProcessSection() {
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
-          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundImage: 'url(/circuit-bg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

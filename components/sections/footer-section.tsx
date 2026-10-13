@@ -158,7 +158,7 @@ export function FooterSection() {
       <div
         className="absolute inset-0 opacity-25"
         style={{
-          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundImage: 'url(/circuit-bg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

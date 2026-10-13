@@ -27,7 +27,7 @@ const caseStudies: CaseStudy[] = [
     tag: "Agentic RAG",
     title: "Autonomous Knowledge Base Crawler",
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop",
-    proofSrc: "/office-chatbot-workflow.png",
+    proofSrc: "/office-chatbot-workflow.webp",
     overview:
       "An n8n-powered support agent with a nightly web crawler, cyrb53 content hashing, and a Supabase vector store — engineered to keep the AI grounded and hallucination-free.",
     link: "#",
@@ -62,7 +62,7 @@ const caseStudies: CaseStudy[] = [
     tag: "Voice AI",
     title: "Zero-Conflict Scheduling Agent",
     src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2340&auto=format&fit=crop",
-    proofSrc: "/scheduling-multidoc-workflow.png",
+    proofSrc: "/scheduling-multidoc-workflow.webp",
     overview:
       "A live voice-calling agent with strict webhook routing between Vapi and Google Calendar, handling real-time rescheduling while masking API latency for a seamless caller experience.",
     link: "#",
@@ -97,7 +97,7 @@ const caseStudies: CaseStudy[] = [
     tag: "Lead Generation",
     title: "LLM-Scored Outbound Engine",
     src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    proofSrc: "/leadgen-workflow.png",
+    proofSrc: "/leadgen-workflow.webp",
     overview:
       "A multi-branch n8n workflow that scrapes Apollo.io for tech-stack fingerprints and uses an LLM to score each lead's 'AI Readiness' — powering precision-targeted outreach.",
     link: "#",
@@ -275,7 +275,7 @@ export function CaseStudySection() {
       <div
         className="absolute inset-0 opacity-[0.08]"
         style={{
-          backgroundImage: 'url(/circuit-bg.png)',
+          backgroundImage: 'url(/circuit-bg.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
