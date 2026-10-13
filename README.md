@@ -17,7 +17,7 @@ I'm an automation developer building production-grade AI systems — n8n workflo
 - **Services** — What I build: AI voice systems, workflow automation, RAG, CRM automation, lead gen, and strategy consulting
 - **Case Studies** — Real projects with technical build breakdowns and hover-to-reveal proof-of-work screenshots from actual n8n workflows
 - **Process** — How I work, from discovery to handoff
-- **Skills** — The tools I use: n8n, Vapi, Supabase, OpenAI, Claude, PostgreSQL, Apollo.io, LangChain, Meta APIs, and more
+- **Skills** — The tools I use: n8n, Vapi, Supabase, OpenAI, LangGraph, PostgreSQL, Apollo.io, LangChain, Meta APIs, and more
 - **Contact** — Get in touch
 
 ## Tech Stack
